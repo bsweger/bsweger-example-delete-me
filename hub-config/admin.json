@@ -1,25 +1,17 @@
 {
     "schema_version": "https://raw.githubusercontent.com/hubverse-org/schemas/main/v5.0.0/admin-schema.json",
-    "name": "Example complex forecast hub",
+    "name": "Bsweger example delete me",
     "maintainer": "hubverse",
     "contact": {
-        "name": "Maintainer name",
-        "email": "maintainer.email@example.com"
+        "name": "Kathryn Janeway",
+        "email": "janeway@starfleet.org"
     },
     "repository": {
         "host": "github",
-        "owner": "Infectious-Disease-Modeling-Hubs",
-        "repository": "example-complex-forecast-hub"
+        "owner": "bsweger",
+        "repository": "bsweger-example-delete-me"
     },
     "file_format": ["csv"],
     "timezone": "US/Eastern",
-    "model_output_dir": "model-output",
-    "cloud": {
-        "enabled": true,
-        "host": {
-          "name": "aws",
-          "storage_service": "s3",
-          "storage_location": "example-complex-forecast-hub"
-        }
-    }
+    "model_output_dir": "model-output"
 }

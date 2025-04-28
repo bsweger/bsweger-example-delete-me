@@ -47,32 +47,3 @@ rate_category_target_data <- read.csv(
   "target-data/wk-flu-hosp-rate-category-target-values.csv")
 head(rate_category_target_data)
 ```
-
-
-To connect to a copy of this example data hosted in the cloud (on AWS S3), your code would look like this:
-
-```{r}
-library(aws.s3)
-library(dplyr)
-library(hubUtils)
-
-hub_path <- s3_bucket("hubverse-example-complex-forecast-hub")
-model_outputs <- hubUtils::connect_hub(hub_path) %>%
-  dplyr::collect()
-head(model_outputs)
-
-target_time_series_data <- aws.s3::s3read_using(
-  read.csv,
-  object = "s3://hubverse-example-complex-forecast-hub/target-data/flu-hospitalization-time-series.csv")
-head(target_time_series_data)
-
-inc_flu_hosp_target_data <- aws.s3::s3read_using(
-  read.csv,
-  object = "s3://hubverse-example-complex-forecast-hub/target-data/wk-inc-flu-hosp-target-values.csv")
-head(inc_flu_hosp_target_data)
-
-rate_category_target_data <- aws.s3::s3read_using(
-  read.csv,
-  object = "s3://hubverse-example-complex-forecast-hub/target-data/wk-flu-hosp-rate-category-target-values.csv")
-head(rate_category_target_data)
-```
